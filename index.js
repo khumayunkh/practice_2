@@ -21,3 +21,10 @@ let m = new Map()
 m.set('one', 2).set('two',2)
 console.log(m.get('one')) // 1
 console.log(m.get(2)) // undefined
+
+let y = {name:'Humoyun', firstName: 'Hasanov'}
+
+for(let x in y){
+    console.log(x) // name, firstName
+    console.log(y[x]) // Humoyun. Hasanov
+}
