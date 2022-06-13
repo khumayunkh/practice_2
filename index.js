@@ -33,5 +33,11 @@ var button = document.getElementById("clickme"),
   count = 0;
 button.onclick = function() {
   count += 1;
-  button.innerHTML = "Click me: " + count;
+  document.querySelector('.counter').innerHTML = "Click " + count;
 };
+
+let buuton_minus = document.querySelector('.minus')
+buuton_minus.onclick = function(){
+    count -= 1;
+    document.querySelector('.counter').innerHTML = 'Click ' + count
+}
