@@ -58,3 +58,11 @@ function doubleChar(){
 }
 
 document.querySelector('.btn_double').onclick = doubleChar
+
+function sortBylength(){
+    let a = ['ss', 'f', 'fdg', 'frrrr']
+    let b = a.sort((a,b) => a.length-b.length)
+    return b 
+}
+
+console.log(sortBylength())
