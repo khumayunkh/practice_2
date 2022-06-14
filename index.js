@@ -52,9 +52,9 @@ let a = [2,1,2,3, 'humayun', ' hello']
 console.log(filterArray(a))
 
 function doubleChar(){
-    let a = [...'Hello']
-    let b = a.map(item => item.repeat(2)).toString()
-    return b
+    let a = [...document.querySelector('.double_input').value]
+    let b = a.map(item => item.repeat(2)).join('')
+    return document.querySelector('.double').innerHTML = b
 }
 
-console.log(doubleChar())
+document.querySelector('.btn_double').onclick = doubleChar
