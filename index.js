@@ -29,8 +29,8 @@ for(let x in y){
     console.log(y[x]) // Humoyun. Hasanov
 }
 
-var button = document.getElementById("clickme"),
-  count = 0;
+var button = document.getElementById("clickme")
+let count = 0;
 button.onclick = function() {
   count += 1;
   document.querySelector('.counter').innerHTML = "Click " + count;
@@ -41,3 +41,20 @@ buuton_minus.onclick = function(){
     count -= 1;
     document.querySelector('.counter').innerHTML = 'Click ' + count
 }
+
+
+function filterArray(a){
+    let b = a.filter(item => typeof item === 'number')
+    return b
+}
+
+let a = [2,1,2,3, 'humayun', ' hello']
+console.log(filterArray(a))
+
+function doubleChar(){
+    let a = [...'Hello']
+    let b = a.map(item => item.repeat(2)).toString()
+    return b
+}
+
+console.log(doubleChar())
