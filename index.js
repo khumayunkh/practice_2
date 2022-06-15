@@ -82,11 +82,12 @@ console.log(sortDrinkPrice(drinks))
 
 
 function tuckIn(a,b){
-    a.splice(1,0,...b)
+    a.splice(0,0,...b)
+    a.sort((a,b) => a-b)
     return a
 }
 
-console.log(tuckIn([1,5],[2,3,4]))
+console.log(tuckIn([41,52,111],[32,33,42]))
 
 
 
@@ -94,4 +95,13 @@ function isFirstSuperir(a,b){
     return a.toString() >= b.toString()
 }
 
-console.log(isFirstSuperir([1,2,3], [1,2,3]))
+console.log(isFirstSuperir([1,2,3,4], [1,2,4,4]))
+
+function highestDigit(){
+    // let x = [...a.toString()]
+    let x = [...document.querySelector('.input_highest').value]
+    x.sort((a,b)=> a-b)
+    return document.querySelector('.highest').innerHTML = x[x.length-1]
+}
+
+document.querySelector('.btn_highest').onclick = highestDigit
