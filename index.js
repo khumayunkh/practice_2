@@ -66,3 +66,16 @@ function sortBylength(){
 }
 
 console.log(sortBylength())
+
+let drinks = [
+    {name: 'lemonade', price: 50},
+    {name: 'lime', price: 10},
+    {name: 'water', price: 5}
+]
+
+function sortDrinkPrice(drinks){
+    let b = drinks.sort((a,b) => a.price - b.price)
+    return b
+}
+
+console.log(sortDrinkPrice(drinks))
