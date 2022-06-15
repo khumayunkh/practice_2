@@ -121,3 +121,11 @@ function countVowels(){
 
 
 document.querySelector('.btn_counter').onclick = countVowels
+
+function getAbsSum(){
+    let a = [...document.querySelector('.input_sum').value]
+    let y = a.reduce((a,b)=> parseInt(a)+parseInt(b))
+    return document.querySelector('.sum').innerHTML = y
+}
+
+document.querySelector('.btn_sum').onclick = getAbsSum
