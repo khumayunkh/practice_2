@@ -87,3 +87,11 @@ function tuckIn(a,b){
 }
 
 console.log(tuckIn([1,5],[2,3,4]))
+
+
+
+function isFirstSuperir(a,b){
+    return a.toString() >= b.toString()
+}
+
+console.log(isFirstSuperir([1,2,3], [1,2,3]))
