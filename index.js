@@ -98,10 +98,26 @@ function isFirstSuperir(a,b){
 console.log(isFirstSuperir([1,2,3,4], [1,2,4,4]))
 
 function highestDigit(){
-    // let x = [...a.toString()]
     let x = [...document.querySelector('.input_highest').value]
     x.sort((a,b)=> a-b)
     return document.querySelector('.highest').innerHTML = x[x.length-1]
 }
 
 document.querySelector('.btn_highest').onclick = highestDigit
+
+
+
+function countVowels(){
+    let str = document.querySelector('.counter_input').value
+    let vowels = ['a', 'e', 'o', 'i', 'u']
+    let counter = 0
+    for(let i in vowels){
+        if(str.includes(vowels[i])){
+            counter++
+        }
+    } 
+    return document.querySelector('.counter_vowels').innerHTML = counter
+}
+
+
+document.querySelector('.btn_counter').onclick = countVowels
