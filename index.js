@@ -79,3 +79,11 @@ function sortDrinkPrice(drinks){
 }
 
 console.log(sortDrinkPrice(drinks))
+
+
+function tuckIn(a,b){
+    a.splice(1,0,...b)
+    return a
+}
+
+console.log(tuckIn([1,5],[2,3,4]))
