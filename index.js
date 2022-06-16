@@ -159,10 +159,24 @@ document.querySelector('.btn_cubes').onclick = sumOfCubes
 
 function getOnlyEvents(){
     let a = [...document.querySelector('.events_input').value]
-    console.log(a)
     let c = a.map(item => parseInt(item)).filter(item => item % 2 == 0).join(' ')
-    console.log(c)
     return document.querySelector('.events').innerHTML = c
 }
 
 document.querySelector('.btn_events').onclick = getOnlyEvents
+
+function isAvgWhole(){
+    let a = [...document.querySelector('.input_avg').value]
+    let c = a.reduce((a,b)=> parseInt(a)+parseInt(b))
+    let x = c % a.length === 0
+    return document.querySelector('.avg').innerHTML = x
+}
+
+document.querySelector('.btn_avg').onclick = isAvgWhole
+
+
+
+
+function sortNumsAscending(){
+    
+}
