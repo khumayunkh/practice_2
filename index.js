@@ -129,3 +129,17 @@ function getAbsSum(){
 }
 
 document.querySelector('.btn_sum').onclick = getAbsSum
+
+
+function firstVowel(){
+    let a = [...document.querySelector(".input_first_vowel").value]
+    let vowels = ['o', 'e', 'a', 'i', 'u']
+    for(let i in a){
+        if(vowels.includes(a[i])){
+            return document.querySelector('.vowel').innerHTML = vowels[i]
+        }
+    }
+}
+
+document.querySelector('.btn_vowel').onclick = firstVowel
+
