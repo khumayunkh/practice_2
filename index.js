@@ -178,5 +178,11 @@ document.querySelector('.btn_avg').onclick = isAvgWhole
 
 
 function sortNumsAscending(){
-    
+    let a = [...document.querySelector('.input_sort').value]
+    let c = a.map(item => parseInt(item)).sort((a,b) => a-b)
+    let x = [...new Set(c)].join(' ')
+    return document.querySelector('.sort').innerHTML = x
 }
+
+document.querySelector('.btn_sort').onclick = sortNumsAscending
+
