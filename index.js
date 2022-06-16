@@ -38,7 +38,7 @@ button.onclick = function() {
 
 let buuton_minus = document.querySelector('.minus')
 buuton_minus.onclick = function(){
-    count -= 1;
+    count >0 ? count -= 1 : null;
     document.querySelector('.counter').innerHTML = 'Click ' + count
 }
 
