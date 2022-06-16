@@ -143,3 +143,16 @@ function firstVowel(){
 
 document.querySelector('.btn_vowel').onclick = firstVowel
 
+console.log(Math.pow(2,5))
+
+function sumOfCubes(){
+    let a = [...document.querySelector('.input_cubes').value]
+    let c = a.map(item => parseInt(Math.pow(item, 3)))
+    let d = 0
+    for(let i of c){
+        d += i
+    }
+    return document.querySelector('.cubes').innerHTML = d
+}
+
+document.querySelector('.btn_cubes').onclick = sumOfCubes
