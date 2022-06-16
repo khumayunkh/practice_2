@@ -156,3 +156,13 @@ function sumOfCubes(){
 }
 
 document.querySelector('.btn_cubes').onclick = sumOfCubes
+
+function getOnlyEvents(){
+    let a = [...document.querySelector('.events_input').value]
+    console.log(a)
+    let c = a.map(item => parseInt(item)).filter(item => item % 2 == 0).join(' ')
+    console.log(c)
+    return document.querySelector('.events').innerHTML = c
+}
+
+document.querySelector('.btn_events').onclick = getOnlyEvents
