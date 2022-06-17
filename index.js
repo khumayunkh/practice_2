@@ -186,3 +186,18 @@ function sortNumsAscending(){
 
 document.querySelector('.btn_sort').onclick = sortNumsAscending
 
+
+
+let k = 'potato'
+let po = [...k]
+console.log(po)
+console.log(po.includes('e', 's') ? 2 : 1)
+
+
+function potato(){
+    let potato = document.querySelector('.input_potato').value
+    console.log(potato)
+    return document.querySelector('.potatoes').innerHTML = potato.includes('potatoes') ? 2 : 1
+}
+
+document.querySelector('.btn_potatoes').onclick = potato
