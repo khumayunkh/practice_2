@@ -201,3 +201,13 @@ function potato(){
 }
 
 document.querySelector('.btn_potatoes').onclick = potato
+
+
+const sortDescending = () =>{
+    let a = [...(document.querySelector('.input_descen').value)]
+    let b = a.map(item => parseInt(item)).sort((a,b) => a-b).reverse()
+    let c = [...new Set(b)].join(' ')
+    return document.querySelector('.descen').innerHTML = c
+}
+
+document.querySelector('.btn_descen').onclick = sortDescending
