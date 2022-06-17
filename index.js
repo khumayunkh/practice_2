@@ -134,8 +134,10 @@ document.querySelector('.btn_sum').onclick = getAbsSum
 function firstVowel(){
     let a = document.querySelector(".input_first_vowel").value
     let vowels = ['o', 'e', 'a', 'i', 'u']
-    for(let i in a){
-        return document.querySelector('.vowel').innerHTML =  a.search(vowels)
+    for(let i in vowels){
+        if(vowels.includes(a[i])){
+            return document.querySelector('.vowel').innerHTML = a[i]
+        }
     }
 }
 
