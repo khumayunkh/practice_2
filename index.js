@@ -294,3 +294,28 @@ function set(){
 }
 
 document.querySelector('.btn_set').onclick = set
+
+
+// let zip = ['1', '2', '3', '4', 'o']
+// let i = zip.map(item => parseInt(item)).filter(it => it === it)
+// console.log(i)
+// console.log(Number.isInteger(i))
+
+function zip(){
+    let a = [...document.querySelector('.zip_input').value]
+    let b = a.map(item => parseInt(item)).filter(item => item === item)
+    console.log(b)
+    return document.querySelector('.zip').innerHTML = b && b.length === 5
+}
+
+document.querySelector('.zip_btn').onclick = zip
+
+function isSymmetrical(){
+    let a = [...document.querySelector('.input_symmetric').value]
+    let b = a.map(item => parseInt(item))
+    let x = b.join('')
+    let c = b.reverse().join('')
+    return document.querySelector('.symmetric').innerHTML = c === x
+}
+
+document.querySelector('.btn_symmetric').onclick = isSymmetrical
