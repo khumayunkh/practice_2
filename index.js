@@ -246,4 +246,15 @@ function keysAndValues(obj){
 
 console.log(keysAndValues(obj))
 
+function factorial(){
+    let a = parseInt(document.querySelector('.input_factorial').value)
+    let b = 1
+    for(let i = 1; i<=a; i++){
+        b *= i
+    }
+    return document.querySelector('.factorial').innerHTML = b
+}
+
+
+document.querySelector('.btn_factorial').onclick = factorial
 
