@@ -132,12 +132,10 @@ document.querySelector('.btn_sum').onclick = getAbsSum
 
 
 function firstVowel(){
-    let a = [...document.querySelector(".input_first_vowel").value]
+    let a = document.querySelector(".input_first_vowel").value
     let vowels = ['o', 'e', 'a', 'i', 'u']
     for(let i in a){
-        if(vowels.includes(a[i])){
-            return document.querySelector('.vowel').innerHTML = vowels[i]
-        }
+        return document.querySelector('.vowel').innerHTML =  a.search(vowels)
     }
 }
 
@@ -211,3 +209,15 @@ const sortDescending = () =>{
 }
 
 document.querySelector('.btn_descen').onclick = sortDescending
+
+
+function addUp(){
+    let a = parseInt(document.querySelector('.input_sum_num').value)
+    let b = 0
+    for(let i = 0; i<=a; i++){
+        b += i
+    }
+    return document.querySelector('.sum_num').innerHTML = b
+}
+
+document.querySelector('.btn_sum_num').onclick = addUp
