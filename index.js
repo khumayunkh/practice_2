@@ -221,3 +221,26 @@ function addUp(){
 }
 
 document.querySelector('.btn_sum_num').onclick = addUp
+
+let obj = {a:1, b:2, c:3}
+
+function keyS(obj){
+    return Object.keys(obj)
+}
+
+
+function values(obj){
+    return Object.values(obj)
+}
+
+// let keysAndValues = new Array(values(obj), keys(obj))
+// console.log(keysAndValues)
+
+function keysAndValues(obj){
+    let x = new Array(values(obj), keyS(obj))
+    return x
+}
+
+console.log(keysAndValues(obj))
+
+
