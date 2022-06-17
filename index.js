@@ -277,3 +277,20 @@ function toStr(obj){
 }
 
 console.log(toStr(obb))
+
+function canNest(array_1,array_2){
+    let a = array_1.sort()
+    let b = array_2.sort()
+    console.log([a.length-1])
+    return a[0] > b[0] && a[a.length-1] < b[b.length-1]
+}
+
+console.log(canNest([9, 9, 8], [8, 9]))
+
+function set(){
+    let a = [...document.querySelector('.input_set').value]
+    let b =[...new Set(a)].sort().join(' ')
+    return document.querySelector('.set').innerHTML = b
+}
+
+document.querySelector('.btn_set').onclick = set
