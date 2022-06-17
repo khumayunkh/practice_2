@@ -1,4 +1,4 @@
-console.log('hello')
+// console.log('hello')
 
 let x = [1,2,3,4,5]
 let sum = 0
@@ -6,28 +6,28 @@ for(let i of x){
     sum += i
 }
 
-console.log(sum)
+// console.log(sum)
 
 let euro = Intl.NumberFormat('es',{style:'currency', currency:'EUR'}).format(18);
 console.log(euro)
 
-console.log('hello')
+// console.log('hello')
 
-let s = new Set();
-s.add(2).add(2).add(3) // 2, 3
-console.log(s)
+// let s = new Set();
+// s.add(2).add(2).add(3) // 2, 3
+// console.log(s)
 
-let m = new Map()
-m.set('one', 2).set('two',2)
-console.log(m.get('one')) // 1
-console.log(m.get(2)) // undefined
+// let m = new Map()
+// m.set('one', 2).set('two',2)
+// console.log(m.get('one')) // 1
+// console.log(m.get(2)) // undefined
 
-let y = {name:'Humoyun', firstName: 'Hasanov'}
+// let y = {name:'Humoyun', firstName: 'Hasanov'}
 
-for(let x in y){
-    console.log(x) // name, firstName
-    console.log(y[x]) // Humoyun. Hasanov
-}
+// for(let x in y){
+//     console.log(x) // name, firstName
+//     console.log(y[x]) // Humoyun. Hasanov
+// }
 
 var button = document.getElementById("clickme")
 let count = 0;
@@ -59,26 +59,26 @@ function doubleChar(){
 
 document.querySelector('.btn_double').onclick = doubleChar
 
-function sortBylength(){
-    let a = ['ss', 'f', 'fdg', 'frrrr']
-    let b = a.sort((a,b) => a.length-b.length)
-    return b 
-}
+// function sortBylength(){
+//     let a = ['ss', 'f', 'fdg', 'frrrr']
+//     let b = a.sort((a,b) => a.length-b.length)
+//     return b 
+// }
 
-console.log(sortBylength())
+// console.log(sortBylength())
 
-let drinks = [
-    {name: 'lemonade', price: 50},
-    {name: 'lime', price: 10},
-    {name: 'water', price: 5}
-]
+// let drinks = [
+//     {name: 'lemonade', price: 50},
+//     {name: 'lime', price: 10},
+//     {name: 'water', price: 5}
+// ]
 
-function sortDrinkPrice(drinks){
-    let b = drinks.sort((a,b) => a.price - b.price)
-    return b
-}
+// function sortDrinkPrice(drinks){
+//     let b = drinks.sort((a,b) => a.price - b.price)
+//     return b
+// }
 
-console.log(sortDrinkPrice(drinks))
+// console.log(sortDrinkPrice(drinks))
 
 
 function tuckIn(a,b){
@@ -141,7 +141,7 @@ function firstVowel(){
 
 document.querySelector('.btn_vowel').onclick = firstVowel
 
-console.log(Math.pow(2,5))
+// console.log(Math.pow(2,5))
 
 function sumOfCubes(){
     let a = [...document.querySelector('.input_cubes').value]
@@ -186,15 +186,18 @@ document.querySelector('.btn_sort').onclick = sortNumsAscending
 
 
 
-let k = 'potato'
-let po = [...k]
-console.log(po)
-console.log(po.includes('e', 's') ? 2 : 1)
+// let k = 'potato'
+// let po = [...k]
+// console.log(po)
+// console.log(po.includes('e', 's') ? 2 : 1)
 
 
 function potato(){
     let potato = document.querySelector('.input_potato').value
     console.log(potato)
+    if(!potato.includes('potato') && !potato.includes('potatoes')){
+        return document.querySelector('.potatoes').innerHTML = 'zero potato'
+    }
     return document.querySelector('.potatoes').innerHTML = potato.includes('potatoes') ? 2 : 1
 }
 
