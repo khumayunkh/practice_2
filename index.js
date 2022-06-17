@@ -260,3 +260,20 @@ function factorial(){
 
 document.querySelector('.btn_factorial').onclick = factorial
 
+function repetition(a,b){
+    let c = a.repeat(b)
+    return c
+}
+
+
+console.log(repetition('kivi',2))
+
+
+let obb = [{name: 'Humoyun', age:19},{name:'Kamron', age:22}]
+
+function toStr(obj){
+    let a = obj.map(item => item.name).join(' ')
+    return a
+}
+
+console.log(toStr(obb))
