@@ -436,3 +436,18 @@ function arrayOfMultiples(a,b){
 
 
 console.log(arrayOfMultiples(12,10))
+
+
+function numbersSum(a){
+    let c = a.map(item => parseInt(item))
+        .filter(item => item === item)
+    let b = 0
+    console.log(c)
+    for(let i of c){
+        b += i
+    }
+    return b
+}
+
+
+console.log(numbersSum([1, 2, 3, '3']))
