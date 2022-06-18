@@ -338,3 +338,10 @@ function redundant(a){
 const f1 = redundant('appple')
 console.log(f1())
 
+function shiftToRight(a,b){
+    let c = Math.pow(2, b)
+    console.log(c)
+    return a/c
+}
+
+console.log(shiftToRight(-24,2))
