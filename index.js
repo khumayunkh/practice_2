@@ -319,3 +319,11 @@ function isSymmetrical(){
 }
 
 document.querySelector('.btn_symmetric').onclick = isSymmetrical
+
+function countTrue(a){
+    let count = 0
+    a.forEach(item => item === true ? count++ : null )
+    return count
+}
+
+console.log(countTrue([true, false, true, true]))
