@@ -511,6 +511,14 @@ console.log(progressDays([3, 4, 1, 2]))
 function equel(){
     let a = [...document.querySelector('.input_equel').value]
     let count = 0
+    let b = a.map(item => parseInt(item))
+    for(let i in b){
+        for(let f in b[i]){
+            if(b[f] === b[f]){
+              count++
+            }
+        }
+    }
     return document.querySelector('.equel').innerHTML = count
 }
 
