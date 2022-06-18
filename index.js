@@ -423,3 +423,16 @@ function secondLargest(a){
 
 
 console.log(secondLargest([12,62,10,26,45]))
+
+function arrayOfMultiples(a,b){
+    let c = new Array()
+    let d = 1
+    for(let i = 1; i<=b; i++){
+        d = i * a
+        c.push(d)
+    }
+    return c
+}
+
+
+console.log(arrayOfMultiples(12,10))
