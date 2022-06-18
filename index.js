@@ -451,3 +451,23 @@ function numbersSum(a){
 
 
 console.log(numbersSum([1, 2, 3, '3']))
+
+
+
+function totalValue(...a){
+    let x = a[0].reduce((a,b) => a*b)
+        + a[1].reduce((a,b) => a*b)
+            + a[2].reduce((a,b) => a*b)
+    return x
+}
+
+console.log(totalValue([4, 2, 4], [3, 3, 3,], [1, 1, 2]))
+
+function jazzify(a){
+    let b = a.map(item => item.includes('7') ? item : item + '7')
+    return b
+}
+
+
+console.log(jazzify(["F", "E", "A", "Ab", "Gm", "C"]))
+
