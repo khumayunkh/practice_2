@@ -395,3 +395,13 @@ function isSpecialArray(){
 
 document.querySelector('.btn_special').onclick = isSpecialArray
 
+function paths(){
+    let a = parseInt(document.querySelector('.input_paths').value)
+    let b = 1
+    for(let i = 1; i<=a; i++){
+        b *= i
+    }
+    return document.querySelector('.paths').innerHTML = b
+}
+
+document.querySelector('.btn_paths').onclick = paths
