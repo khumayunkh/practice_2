@@ -471,3 +471,47 @@ function jazzify(a){
 
 console.log(jazzify(["F", "E", "A", "Ab", "Gm", "C"]))
 
+const stolenItems = {
+    tv: 30,
+    skate: 20,
+    stereo: 50,
+  }
+
+function stolenItemsSum(stolenItems){
+    let b = Object.values(stolenItems)
+    return b.reduce((a,b) => a+b)
+}
+
+console.log(stolenItemsSum(stolenItems))
+
+
+
+function findNemo(nemo){
+    let b = nemo.split(' ')
+    let c = b.findIndex(item => item === 'Nemo') + 1
+    return c ? `I fount Nemo at ${c}` : `I can't find Nemo :(`
+}
+
+console.log(findNemo("I am finding Nemo !"))
+
+function progressDays(a){
+    let days = 0
+    for(let i = 0; i<a.length; i++){
+        if(a[i]>a[i-1]){
+            days++
+        }
+    }
+    return days
+}
+
+console.log(progressDays([3, 4, 1, 2]))
+
+
+
+function equel(){
+    let a = [...document.querySelector('.input_equel').value]
+    let count = 0
+    return document.querySelector('.equel').innerHTML = count
+}
+
+document.querySelector('.btn_equel').onclick = equel
