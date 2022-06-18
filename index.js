@@ -379,9 +379,19 @@ function valuesss(okk){
     return Object.values(okk)
 }
 
-
 function keyAndValue(okk){
     return new Array(valuesss(okk), keyssss(okk))
 }
 
 console.log(keyAndValue(okk))
+
+
+function isSpecialArray(){
+    let a = [...document.querySelector('.special_input').value]
+    let b = a.filter(el => el % 2 === 0).length
+    let c = a.filter(el => el % 2 !== 0).length
+    return document.querySelector('.special').innerHTML = b === c
+}
+
+document.querySelector('.btn_special').onclick = isSpecialArray
+
