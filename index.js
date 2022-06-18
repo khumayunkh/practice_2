@@ -405,3 +405,13 @@ function paths(){
 }
 
 document.querySelector('.btn_paths').onclick = paths
+
+function clone(){
+    let a = [...document.querySelector('.clone_input').value]
+    let b = Array.from(a)
+    let c = [...a,[...b].join(' ')].join(' ')
+    console.log(c)
+    return document.querySelector('.clone').innerHTML = c
+}
+
+document.querySelector('.btn_clone').onclick = clone
