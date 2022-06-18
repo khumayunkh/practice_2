@@ -347,10 +347,15 @@ function shiftToRight(a,b){
 console.log(shiftToRight(-24,2))
 
 function num_of_digits(){
-    let a = [...document.querySelector('.input_digits').value]
+    let a = [...document
+        .querySelector('.input_digits').value]
     let count = 0
-    a.map(item => parseInt(item)).filter(item => item === item).forEach(item => count++)
-    return document.querySelector('.digits').innerHTML = count
+    a.map(item => parseInt(item))
+        .filter(item => item === item)
+            .forEach(item => count++)
+    return document.querySelector('.digits')
+        .innerHTML = count
 }
 
 document.querySelector('.btn_digits').onclick = num_of_digits
+
