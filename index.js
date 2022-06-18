@@ -408,10 +408,18 @@ document.querySelector('.btn_paths').onclick = paths
 
 function clone(){
     let a = [...document.querySelector('.clone_input').value]
-    let b = Array.from(a)
+    let b = [...a]
     let c = [...a,[...b].join(' ')].join(' ')
     console.log(c)
     return document.querySelector('.clone').innerHTML = c
 }
 
 document.querySelector('.btn_clone').onclick = clone
+
+function secondLargest(a){
+    a.sort((a,b) => a-b) 
+    return a[a.length - 2]
+}
+
+
+console.log(secondLargest([12,62,10,26,45]))
