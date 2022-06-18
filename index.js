@@ -359,3 +359,29 @@ function num_of_digits(){
 
 document.querySelector('.btn_digits').onclick = num_of_digits
 
+function addName(obj, name, value){
+    const a = {}
+    a[name] = value
+    return Object.assign(obj,a)
+}
+
+
+console.log(addName({piano: 500}, 'Brutus', 400))
+
+let okk = {a:1, b:2, c:3}
+
+
+function keyssss(okk){
+    return Object.keys(okk)
+}
+
+function valuesss(okk){
+    return Object.values(okk)
+}
+
+
+function keyAndValue(okk){
+    return new Array(valuesss(okk), keyssss(okk))
+}
+
+console.log(keyAndValue(okk))
