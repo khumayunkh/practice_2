@@ -327,3 +327,14 @@ function countTrue(a){
 }
 
 console.log(countTrue([true, false, true, true]))
+
+function redundant(a){
+    function str(){
+        return a
+    }
+    return str
+}
+
+const f1 = redundant('appple')
+console.log(f1())
+
