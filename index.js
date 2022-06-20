@@ -604,3 +604,14 @@ function rev(){
 }
 
 document.querySelector('.btn_rev').onclick = rev
+
+function matchLastItem(a){
+    let b = a.map(item => item.toString())
+    let c = ''
+    for(let i of b[b.length - 1]){
+        c += i
+    }
+    return c == b[b.length-1]
+}
+
+console.log(matchLastItem(["rsq", "6hi", "g", "rsq6hig"]))
