@@ -523,3 +523,26 @@ function equel(){
 }
 
 document.querySelector('.btn_equel').onclick = equel
+
+let xxs = 'Hello'
+
+function count_length(xxs){
+    let count = 0
+    let x = [...xxs]
+    x.map(item => count++) 
+    return count
+}
+
+console.log(xxs.length)
+console.log(count_length(xxs))
+
+
+let arrrr = [{name:"humoyun", age:22}, {name:'Kamron', age:21}]
+
+
+function tostr(arrrr){
+    let a = arrrr.map(item => item.name).join(' ')
+    return a
+}
+
+console.log(tostr(arrrr))
