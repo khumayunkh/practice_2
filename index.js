@@ -574,3 +574,24 @@ function isRepdigit(){
 }
 
 document.querySelector('.btn_isRepdigit').onclick = isRepdigit
+
+
+
+function dis(a,b){
+    let c = (a/100) * (100-b)
+    return c
+}
+
+console.log(dis(89,20))
+
+function calculator(a,b,c){
+    operations = {
+		'+': (a,b) => a + b,
+		'-': (a,b) => a - b,
+		'*': (a,b) => a * b,
+		'/': (a,b) => b ? a / b :"Can't divide by 0!"
+	}
+    return operations[b](a,c)
+}
+
+console.log(calculator(2 , '+' , 4))
