@@ -595,3 +595,12 @@ function calculator(a,b,c){
 }
 
 console.log(calculator(2 , '+' , 4))
+
+
+function rev(){
+    let a = [...document.querySelector('.input_rev').value]
+    let b = a.map(item => parseInt(item)).reverse().join('')
+    return document.querySelector('.rev').innerHTML = b
+}
+
+document.querySelector('.btn_rev').onclick = rev
