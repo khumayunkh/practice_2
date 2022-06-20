@@ -565,3 +565,12 @@ function generation(a,b){
 
 
 console.log(generation(2 , 'f'))
+
+
+function isRepdigit(){
+    let a = [...document.querySelector('.input_isRepdigit').value]
+    let b = a.map(item => parseInt(item)).reduce((a,b)=> (a && b >= 0) ? a===b : false)
+    return document.querySelector('.isRepdigit').innerHTML = b
+}
+
+document.querySelector('.btn_isRepdigit').onclick = isRepdigit
