@@ -546,3 +546,22 @@ function tostr(arrrr){
 }
 
 console.log(tostr(arrrr))
+
+
+
+
+function generation(a,b){
+    const generation_obj = {
+        '-3': { m: "great grandfather", f: "great grandmother" },
+        "-2": { m: "grandfather", f: "grandmother" },
+        "-1": { m: "father", f: "mother" },
+        0: { m: "me!", f: "me!" },
+        1: { m: "son", f: "daughter" },
+        2: { m: "grandson", f: "granddaughter" },
+        3: { m: "great grandson", f: "great granddaughter" },
+    };
+    return generation_obj[a][b]
+}
+
+
+console.log(generation(2 , 'f'))
