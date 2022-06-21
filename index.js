@@ -649,13 +649,34 @@ function removeDups(a){
 console.log(removeDups([1, 0, 1, 0]))
 
 
-function factorChain(arr) {
-	for (let i = 1; i < arr.length; i++){
-		if (arr[i] % arr[i - 1] != 0){
-			return false
-		}
-	}
-	return true
+function factorChain(a){
+    let b = new Array()
+    let x = 1
+    let i = a[0]
+    let c = a.length
+    console.log(c)
+    for(i; i<=c ; i++){
+        b.push(x)
+        x = x * 2
+    }
+    return b
 }
 
 console.log(factorChain([1, 2, 4, 8, 16, 32]))
+
+function factorChain_2(a){
+    let count = 1
+    console.log(a.length)
+    for(let i = 0; i <= a.length; i++){
+        let x =a[i+1]/2
+        if(a[i]==x){
+            count++
+        }
+    }
+    console.log(a.length)
+    return count == a.length
+}
+
+
+
+console.log(factorChain_2([1, 2, 4, 8, 16, 32, 64, 128]))
