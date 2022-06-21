@@ -709,3 +709,21 @@ function multiplyNums(nums){
 }
 
 console.log(multiplyNums('1, 2, 3, 4'))
+
+
+function numOfSubbarrays(a){
+    let b = a.filter(Array.isArray).length
+    return b 
+}
+
+console.log(numOfSubbarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], 'ppp']))
+
+
+function squareDigits(a){
+    let b = a.toString()
+    let c = [...b]
+    let d = c.map(item => parseInt(item)).map(a => Math.pow(a,2)).join('')
+    return d
+}
+
+console.log(squareDigits(9119))
