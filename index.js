@@ -695,3 +695,11 @@ function uniqueSort(){
 }
 
 document.querySelector('.btn_uniqueSort').onclick = uniqueSort
+
+function validatePIN(){
+    let a = [...document.querySelector('.input_validatePIN').value]
+    let b = a.map(item => parseInt(item)).filter(item => item === item)
+    return document.querySelector('.validatePIN').innerHTML = b.length === 4 || b.length === 6
+}
+
+document.querySelector('.btn_validatePIN').onclick = validatePIN
