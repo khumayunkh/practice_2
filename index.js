@@ -605,32 +605,45 @@ function rev(){
 
 document.querySelector('.btn_rev').onclick = rev
 
-function matchLastItem(a){
-    let b = a.map(item => item.toString())
-    let c = ''
-    for(let i of b[b.length - 1]){
-        c += i
-    }
-    return c == b[b.length-1]
+// function matchLastItem(a){
+//     let b = a.map(item => item.toString())
+//     let c = ''
+//     for(let i of b[b.length - 1]){
+//         c += i
+//     }
+//     return c == b[b.length-1]
+// }
+
+// console.log(matchLastItem(["rsq", "6hi", "g", "rsq6hig"]))
+
+// function backToHome(a){
+//     let upDown = 0 
+//     let leftRight = 0
+//     for(let i of a){
+//         if(i === 'N'){
+//             upDown += 1
+//         }else if(i === 'S'){
+//             upDown -= 1
+//         }else if(i === 'E'){
+//             leftRight += 1
+//         }else if(i === 'W'){
+//             leftRight -= 1
+//         }
+//     }
+//     return upDown === 0 && leftRight === 0
+// }
+
+// console.log(backToHome('EEWWSSNN'))
+
+function allTruthy(...a){
+    return a.every(item => item === true)
 }
 
-console.log(matchLastItem(["rsq", "6hi", "g", "rsq6hig"]))
+console.log(allTruthy(true,true,true))
 
-function backToHome(a){
-    let upDown = 0 
-    let leftRight = 0
-    for(let i of a){
-        if(i === 'N'){
-            upDown += 1
-        }else if(i === 'S'){
-            upDown -= 1
-        }else if(i === 'E'){
-            leftRight += 1
-        }else if(i === 'W'){
-            leftRight -= 1
-        }
-    }
-    return upDown === 0 && leftRight === 0
+function removeDups(a){
+    let b =[...new Set(a)]
+    return b
 }
 
-console.log(backToHome('EEWWSSNN'))
+console.log(removeDups([1, 0, 1, 0]))
