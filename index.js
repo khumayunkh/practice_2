@@ -393,6 +393,12 @@ function isSpecialArray(){
     return document.querySelector('.special').innerHTML = b === c
 }
 
+function getMiddle(a){
+    let b = [...a]
+    let c = b.length
+}
+
+console.log(getMiddle('hello'))
 document.querySelector('.btn_special').onclick = isSpecialArray
 
 function paths(){
@@ -680,3 +686,12 @@ function factorChain_2(a){
 
 
 console.log(factorChain_2([1, 2, 4, 8, 16, 32, 64, 128]))
+
+function uniqueSort(){
+    let a = [...document.querySelector('.input_uniqueSort').value]
+    let b = a.map(item => parseInt(item)).sort()
+    let c = [...new Set(b)].join(' ')
+    return document.querySelector('.uniqueSort').innerHTML = c 
+}
+
+document.querySelector('.btn_uniqueSort').onclick = uniqueSort
