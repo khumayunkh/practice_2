@@ -615,3 +615,22 @@ function matchLastItem(a){
 }
 
 console.log(matchLastItem(["rsq", "6hi", "g", "rsq6hig"]))
+
+function backToHome(a){
+    let upDown = 0 
+    let leftRight = 0
+    for(let i of a){
+        if(i === 'N'){
+            upDown += 1
+        }else if(i === 'S'){
+            upDown -= 1
+        }else if(i === 'E'){
+            leftRight += 1
+        }else if(i === 'W'){
+            leftRight -= 1
+        }
+    }
+    return upDown === 0 && leftRight === 0
+}
+
+console.log(backToHome('EEWWSSNN'))
