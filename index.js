@@ -703,3 +703,9 @@ function validatePIN(){
 }
 
 document.querySelector('.btn_validatePIN').onclick = validatePIN
+
+function multiplyNums(nums){
+	return nums.split(', ').reduce((a, b) => a * b, 1);
+}
+
+console.log(multiplyNums('1, 2, 3, 4'))
