@@ -647,3 +647,15 @@ function removeDups(a){
 }
 
 console.log(removeDups([1, 0, 1, 0]))
+
+
+function factorChain(arr) {
+	for (let i = 1; i < arr.length; i++){
+		if (arr[i] % arr[i - 1] != 0){
+			return false
+		}
+	}
+	return true
+}
+
+console.log(factorChain([1, 2, 4, 8, 16, 32]))
