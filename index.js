@@ -784,3 +784,23 @@ function sumArray(a){
 }
 
 console.log(sumArray([1, [2, [1]], 3]) )
+
+function dashed(a){
+    let b = [...a]
+    return b.join('-')
+}
+
+console.log(dashed('Carpe Diem'))
+
+
+
+function isVowelSandwich(){
+    let vowels = ['o', 'e', 'a', 'i', 'u']
+    let a = [...document.querySelector('.input_isVowelSandwich').value]
+    console.log(a[0])
+    console.log(a[0].includes(vowels))
+    return document.querySelector('.isVowelSandwich').innerHTML = 
+        a[0].includes(vowels)  && a[a.length-1].includes(vowels) 
+}
+
+document.querySelector('.btn_isVowelSandwich').onclick = isVowelSandwich
