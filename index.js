@@ -777,3 +777,10 @@ function warOfNumbers(a){
 }
 
 console.log(warOfNumbers([5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243]))
+
+function sumArray(a){
+    let b = a.flat(10).reduce((a,b) => a+b)
+    return b 
+}
+
+console.log(sumArray([1, [2, [1]], 3]) )
