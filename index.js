@@ -748,3 +748,22 @@ function getNumberOfApples(a,b){
 }
 
 console.log(getNumberOfApples(25, '10%'))
+
+const names = ["Dennis", "Vera", "Mabel", "Annette", "Sussan"]
+const jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
+
+
+function assignPersonToJob(name,job){
+    let a = {}
+    name.forEach((person, i) => a[person] = job[i])
+    return a
+}
+
+console.log(assignPersonToJob(names,jobs))
+
+function capMe(a){
+    return a.map(item => item[0].toUpperCase() + item.substring(1).toLowerCase())
+}
+
+
+console.log(capMe(["samuel", "MABELLE", "letitia", "meridith"]))
