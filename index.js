@@ -767,3 +767,13 @@ function capMe(a){
 
 
 console.log(capMe(["samuel", "MABELLE", "letitia", "meridith"]))
+
+
+function warOfNumbers(a){
+    let b = a.filter(item => item % 2 === 0).reduce((a,b)=> a+b)
+    let c = a.filter(item => item % 2 !== 0).reduce((a,b)=> a+b)
+    let x = new Array(c,b).sort((a,b) => a-b).reverse().reduce((a,b) => a-b)
+    return x
+}
+
+console.log(warOfNumbers([5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243]))
