@@ -797,10 +797,8 @@ console.log(dashed('Carpe Diem'))
 function isVowelSandwich(){
     let vowels = ['o', 'e', 'a', 'i', 'u']
     let a = [...document.querySelector('.input_isVowelSandwich').value]
-    console.log(a[0])
-    console.log(a[0].includes(vowels))
-    return document.querySelector('.isVowelSandwich').innerHTML = 
-        a[0].includes(vowels)  && a[a.length-1].includes(vowels) 
+    if(a.length != 3)return false
+    return document.querySelector('.isVowelSandwich').innerHTML = !vowels.includes(a[0]) && vowels.includes(a[1]) && !vowels.includes(a[2])  
 }
 
 document.querySelector('.btn_isVowelSandwich').onclick = isVowelSandwich
