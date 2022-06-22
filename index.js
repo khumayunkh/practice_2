@@ -727,3 +727,24 @@ function squareDigits(a){
 }
 
 console.log(squareDigits(9119))
+
+
+function factorize(a){
+    let x =new Array()
+    for(let i = 1; i<=a; i++){
+        if(a % i === 0 ){
+            x.push(i)
+        }
+    }
+    return x
+}
+
+console.log(factorize(10))
+
+function getNumberOfApples(a,b){
+    let c = parseInt(b)
+    let d = (a/100) * c 
+    return a-d !=0 ? parseInt(a-d) : `The children didn't get any apples`
+}
+
+console.log(getNumberOfApples(25, '10%'))
