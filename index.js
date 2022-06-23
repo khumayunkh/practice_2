@@ -824,3 +824,16 @@ function flickSwitch(a){
 }
 
 console.log(flickSwitch(["edabit", "flick", "eda", "bit"]))
+
+
+function indexMultiplier(a){
+    let x = 1
+    let b = 0
+    for(let i in a){
+        x = i * a[i]
+        b += x
+    }
+    return b
+}
+
+console.log(indexMultiplier([-3, 0, 8, -6]))
