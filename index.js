@@ -847,3 +847,12 @@ function mirror(a){
 
 
 console.log(mirror([1, 2, 3, 4, 5]))
+
+
+function solveForExp(a,b){
+    let count = 1
+    while(a**count !== b) count++
+    return count
+}
+
+console.log(solveForExp(2, 32))
