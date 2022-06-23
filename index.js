@@ -818,3 +818,9 @@ function fruitSalad(a){
 
 console.log(fruitSalad(["apple", "pear", "grapes"]))
 
+function flickSwitch(a){
+    let b = true
+    return a.map(x => x === 'flick' ? b = !b : b)
+}
+
+console.log(flickSwitch(["edabit", "flick", "eda", "bit"]))
