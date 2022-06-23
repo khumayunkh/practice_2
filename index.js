@@ -827,7 +827,7 @@ console.log(flickSwitch(["edabit", "flick", "eda", "bit"]))
 
 
 function indexMultiplier(a){
-    let x = 1
+    let x = 0
     let b = 0
     for(let i in a){
         x = i * a[i]
@@ -837,3 +837,13 @@ function indexMultiplier(a){
 }
 
 console.log(indexMultiplier([-3, 0, 8, -6]))
+
+function mirror(a){
+    let b = [...a]
+    b.reverse().shift()
+    let c = [...a,...b]
+    return c
+}
+
+
+console.log(mirror([1, 2, 3, 4, 5]))
