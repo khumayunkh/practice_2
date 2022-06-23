@@ -786,8 +786,16 @@ function sumArray(a){
 console.log(sumArray([1, [2, [1]], 3]) )
 
 function dashed(a){
-    let b = [...a]
-    return b.join('-')
+    let vowels = ['o', 'e', 'a', 'i', 'u']
+    let c = ''
+    for(let i in a){
+        if(a.includes(vowels[i])){
+            c += '-' + a[i] + '-'
+        }else{
+            c += a[i]
+        }
+    }
+    return c
 }
 
 console.log(dashed('Carpe Diem'))
@@ -802,3 +810,11 @@ function isVowelSandwich(){
 }
 
 document.querySelector('.btn_isVowelSandwich').onclick = isVowelSandwich
+
+function fruitSalad(a){
+    let b = a.flatMap(str => [str.slice(0, str.length/2), str.slice(str.length/2)]).sort().join('')
+    return b
+}
+
+console.log(fruitSalad(["apple", "pear", "grapes"]))
+
