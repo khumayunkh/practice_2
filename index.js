@@ -856,3 +856,11 @@ function solveForExp(a,b){
 }
 
 console.log(solveForExp(2, 32))
+
+
+function mean(a){
+    let b = a.toString().split('').map(item => +item)
+    return b.reduce((a,b) => (a+b)) / b.length
+}
+
+console.log(mean(42))
