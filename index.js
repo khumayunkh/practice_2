@@ -864,3 +864,22 @@ function mean(a){
 }
 
 console.log(mean(42))
+
+function oneOddOneEven(a){
+    let b = a.toString().split('').map(item => +item)
+    let x = []
+    for(let i of b){
+        if(i % 2 === 0){
+            x.push(true)
+        }
+        if(i % 2 !== 0){
+            x.push(false)
+        }
+    }
+    let y = x.filter(item => item === false).length
+    let z = x.filter(item => item === true).length
+    return y === z
+}
+
+
+console.log(oneOddOneEven(55))
