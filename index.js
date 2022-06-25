@@ -959,23 +959,9 @@ arr1 = [{name:'humoyun', age:9}]
 arr2= [{name:'humoyun', age: 19}, {name: "humo", age: 11}, {name: "kama", age: 10}]
 
 function concatObj(arr1,arr2){
-    let obj = {}
-    let arr3 = []
-    for(let x of arr1){
-        for(let y of arr2){
-            for(let z in x){
-                for(let a in y){
-                    if(x[z] == y[a]){
-                        continue
-                    }
-                    arr3.push(y[a])
-                }
-            }
-        }
-    }
-    let x = [...new Set(arr3)]
-    
-    return x
+    let x = arr1.concat(arr2)
+    let arr3 = x.filter(item => item == item)
+    return arr3
 }
 
 console.log(concatObj(arr1,arr2))
