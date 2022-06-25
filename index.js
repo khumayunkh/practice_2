@@ -957,11 +957,9 @@ console.log(findMax([1,3,5,0,22,11,14,15], 3))
 
 arr1 = [{name:'humoyun', age:9}] 
 arr2= [{name:'humoyun', age: 19}, {name: "humo", age: 11}, {name: "kama", age: 10}]
-
 function concatObj(arr1,arr2){
-    let x = arr1.concat(arr2)
-    let arr3 = x.filter(item => item == item)
-    return arr3
+   let arr3 = arr1.concat(arr2)
+   return arr3
 }
 
 console.log(concatObj(arr1,arr2))
