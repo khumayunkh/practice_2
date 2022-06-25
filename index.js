@@ -949,9 +949,29 @@ console.log(totalLength(["Kamran", "Khumoyun", "Valijonov"]))
 
 
 function findMax(a, b){
-    let b = a.sort((a,b)=> a-b)
+    let c = a.sort((a,b)=> a-b)
     return c
 }
 
 console.log(findMax([1,3,5,0,22,11,14,15], 3))
 
+arr1 = [{name:'humoyun', age:9}] 
+arr2= [{name:'humoyun', age: 19}, {name: "humo", age: 11}, {name: "kama", age: 10}]
+
+function concatObj(arr1,arr2){
+    let obj = {};
+    for(let i of arr1.concat(arr2)){
+        console.log(i)
+        if(!obj[i]){
+            obj[i.name] = i;
+            console.log(obj[i.name])
+        }
+    }
+    let arr3 = [];
+    for(let i in obj) {
+        arr3.push(obj[i])
+    }
+    return arr3
+}
+
+console.log(concatObj(arr1,arr2))
