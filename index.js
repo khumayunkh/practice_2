@@ -959,17 +959,23 @@ arr1 = [{name:'humoyun', age:9}]
 arr2= [{name:'humoyun', age: 19}, {name: "humo", age: 11}, {name: "kama", age: 10}]
 
 function concatObj(arr1,arr2){
-    let obj = {};
-    for(let i of arr1.concat(arr2)){
-        if(!obj[i]){
-            obj[i.name] = i;
+    let obj = {}
+    let arr3 = []
+    for(let x of arr1){
+        for(let y of arr2){
+            for(let z in x){
+                for(let a in y){
+                    if(x[z] == y[a]){
+                        continue
+                    }
+                    arr3.push(y[a])
+                }
+            }
         }
     }
-    let arr3 = [];
-    for(let i in obj) {
-        arr3.push(obj[i])
-    }
-    return arr3
+    let x = [...new Set(arr3)]
+    
+    return x
 }
 
 console.log(concatObj(arr1,arr2))
