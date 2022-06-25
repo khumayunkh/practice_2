@@ -917,3 +917,26 @@ function* yield_1(){
     yield* 'hello'
 }
 
+
+
+function fff(a){
+    let b = a.sort((a,b) => a.length = b.length)
+    return b[0]
+}
+
+console.log(fff(['humo', 'ew', 'hdsfr']))
+
+function func(x){
+    return x + x
+}
+
+function apply(arr, func) {
+    let a = arr.map(func,arr)
+    return a
+}
+function apply_1(arr, func) {
+    let a = arr.map(item=> func(item))
+    return a
+}
+
+console.log(apply_1([1,2,3,4,5], func))
