@@ -883,3 +883,37 @@ function oneOddOneEven(a){
 
 
 console.log(oneOddOneEven(55))
+
+function* generator(){
+    yield 'H'
+    yield 'u'
+    yield 'm'
+    yield 'o'
+    yield 'y'
+    yield 'u'
+    yield 'n'
+}
+
+let ger = generator()
+console.log(ger)
+
+
+
+const itarator = {
+    gen(n=10){
+        let i = 0
+        return{
+            next(){
+                if(i<n){
+                    return {value : ++i, done : false}
+                }
+                return {value : undefined, done : true}
+            }
+        }   
+    }
+}
+
+function* yield_1(){
+    yield* 'hello'
+}
+
