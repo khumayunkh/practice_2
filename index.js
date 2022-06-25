@@ -961,10 +961,8 @@ arr2= [{name:'humoyun', age: 19}, {name: "humo", age: 11}, {name: "kama", age: 1
 function concatObj(arr1,arr2){
     let obj = {};
     for(let i of arr1.concat(arr2)){
-        console.log(i)
         if(!obj[i]){
             obj[i.name] = i;
-            console.log(obj[i.name])
         }
     }
     let arr3 = [];
