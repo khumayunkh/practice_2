@@ -1005,3 +1005,11 @@ function replaceVowel(a){
 }
 
 console.log(replaceVowel('khandabari'))
+
+
+function findHighest(a){
+    let b = a.sort((a,b) => a-b)
+    return b[b.length - 1]
+}
+
+console.log(findHighest([-1,3,5,6,99,12,2]))
