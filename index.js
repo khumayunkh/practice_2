@@ -955,11 +955,42 @@ function findMax(a, b){
 
 console.log(findMax([1,3,5,0,22,11,14,15], 3))
 
-arr1 = [{name:'humoyun', age:9}] 
+arr1 = [{name:'humoyun', age:19}] 
 arr2= [{name:'humoyun', age: 19}, {name: "humo", age: 11}, {name: "kama", age: 10}]
+
 function concatObj(arr1,arr2){
    let arr3 = arr1.concat(arr2)
+   arr3 = new Set(arr3)
+   console.log(arr1[0] == arr2[0])
    return arr3
 }
-
 console.log(concatObj(arr1,arr2))
+
+function concatObjectsWithoutDuplicates(arr1, arr2) {
+    var result = arr1.concat(arr2);
+    for (var i = 0; i < result.length; i++) {
+        for (var j = i + 1; j < result.length; j++) {
+            for (const [key, value] of Object.entries(result[i])) {
+                if (result[j][key] === value) {
+                    result.splice(j, 1);
+                }
+            }
+        }
+    }
+    return result
+}
+
+console.log(concatObjectsWithoutDuplicates(arr1, arr2))
+
+
+
+function doubleFactorial(a){
+   let x = 1
+   while(a >= 1){
+    x *= a
+    a = a - 2
+   }
+   return x
+}
+
+console.log(doubleFactorial(2))
