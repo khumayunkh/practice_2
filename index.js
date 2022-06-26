@@ -985,12 +985,23 @@ console.log(concatObjectsWithoutDuplicates(arr1, arr2))
 
 
 function doubleFactorial(a){
-   let x = 1
-   while(a >= 1){
+    let x = 1
+    while(a >= 1){
     x *= a
     a = a - 2
-   }
-   return x
+    }
+    return x
 }
 
 console.log(doubleFactorial(2))
+
+
+function replaceVowel(a){
+    let vowels = { 'a' : 1, 'e' : 2,
+        'i' : 3, 'o' : 4, 'u' : 5,}
+    return [...a]
+        .map(item => item in vowels 
+            ? vowels[item] : item).join('')
+}
+
+console.log(replaceVowel('khandabari'))
