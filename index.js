@@ -736,7 +736,7 @@ function factorize(a){
             x.push(i)
         }
     }
-    return x
+    return x  
 }
 
 console.log(factorize(10))
@@ -1013,3 +1013,38 @@ function findHighest(a){
 }
 
 console.log(findHighest([-1,3,5,6,99,12,2]))
+
+function fixImport(a){
+    let b = a.slice(a.indexOf('from'))
+    let c = a.slice(0, a.indexOf('from'))
+    console.log(c)
+    return `${b} ${c}`
+}
+
+console.log(fixImport('import object from module_name'))
+
+
+
+
+let arrr = [12,34,4,5,'6',78]
+console.log(arrr.slice(0, arrr.indexOf(5)))
+console.log(arrr.splice(1,4))
+
+
+
+function set_timeout_1(){
+    return 'hello'
+}
+
+console.log(setTimeout(set_timeout_1, 3000))
+
+function try_catch(){
+    let x = 5
+    try{
+        return ducument.querySelector('.tetxt').innerHTML = x
+    }catch(err){
+        return  err.message
+    }
+}
+
+console.log(try_catch())
