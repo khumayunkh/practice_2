@@ -1172,4 +1172,18 @@ function getTotalPrice(a){
 console.log(getTotalPrice([
     { product: "Chocolate", quantity: 1, price: 0.10 },
     { product: "Lollipop", quantity: 1, price: 0.20 }
-  ]))
+]))
+
+function lonelyInteger(arr) {
+    let y = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.includes(-arr[i])) {
+           continue
+        } else {
+            y = arr[i]
+        }
+    }
+    return y
+ }
+
+console.log(lonelyInteger([1, -1, 2, -2, 3]))
