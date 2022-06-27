@@ -1100,3 +1100,14 @@ function lastDig(a,b,c){
 console.log(lastDig(12, 215, 2142))
 
 
+function missingNum(a){
+    let x = a.sort((a,b)=> a-b)
+    for(let i = 1; i<=x.length;i++){
+        if(x.indexOf(i) === -1){
+            x.push(i)
+        }
+    }
+    return x.sort((a,b)=> a-b)
+}
+
+console.log(missingNum([1,2,3,4,5,7,8,10,9,12,14]))
