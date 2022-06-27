@@ -1146,3 +1146,30 @@ function getLength(a){
 }
 
 console.log(getLength([1, [2, [3, 4]]]))
+
+
+function numInStr(a){
+    let x = []
+    for(let i = 0; i<a.length; i++){
+        for(j=0; j<a[i].length; j++){
+            if(a[i][j]>='0' && a[i][j]<='9'){
+                x.push(a[i])
+                break
+            }
+        }
+    }
+    return x
+}
+
+console.log(numInStr(["1a", "a", "2b", "b"]))
+
+
+function getTotalPrice(a){
+    let x = a.reduce((a,b) => a.price +b.price)
+    return x
+}
+
+console.log(getTotalPrice([
+    { product: "Chocolate", quantity: 1, price: 0.10 },
+    { product: "Lollipop", quantity: 1, price: 0.20 }
+  ]))
