@@ -1247,3 +1247,20 @@ function dashed(a){
 
 
 console.log(dashed('Carpe Diem'))
+
+function solve(a){
+    let x = a.split(' ')
+    let y = x.map(item => +item).filter(item => item = item)
+    return y.sort((a,b)=> a-b).reverse().reduce((a,b)=> a-b)
+}
+
+console.log(solve('x + 55 = 60'))
+
+function formatMath(a){
+    let x = a.split(' ')
+    let y = x.map(item => parseInt(item))
+        .filter(item => item == item)
+    return y.reduce((a,b) => a+b)
+}
+console.log(formatMath("3 + 14"))
+
