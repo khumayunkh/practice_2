@@ -1111,3 +1111,13 @@ function missingNum(a){
 }
 
 console.log(missingNum([1,2,3,4,5,7,8,10,9,12,14]))
+
+function product(a,b){
+    return function(c,d){
+        return function(f,g){
+            return (a * c * f) + (b * d * g)
+        }
+    }
+}
+
+console.log(product(1,2)(1,1)(2,3))
