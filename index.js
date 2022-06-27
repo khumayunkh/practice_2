@@ -1078,3 +1078,17 @@ function returnMultiple(){
 
 console.log(returnMultiple())
 
+
+
+
+async function awaitAsync(){
+    let responce = await setTimeout(() => console.log('hummo'), 3000)
+    let x = await responce
+    return {responce, x}
+}
+
+console.log(awaitAsync())
+
+
+
+
