@@ -1187,3 +1187,21 @@ function lonelyInteger(arr) {
  }
 
 console.log(lonelyInteger([1, -1, 2, -2, 3]))
+
+
+function trace(a){
+    let count = 0
+    for(i in a){
+        for(j = 0; j<=i.length+1; j++ ){
+            count += a[i][j]
+            console.log(a[i][j])
+        }
+    }
+    return count
+}
+
+console.log(trace([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ]))
