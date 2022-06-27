@@ -1031,13 +1031,6 @@ console.log(arrr.slice(0, arrr.indexOf(5)))
 console.log(arrr.splice(1,4))
 
 
-
-function set_timeout_1(){
-    return 'hello'
-}
-
-console.log(setTimeout(set_timeout_1, 3000))
-
 function try_catch(){
     let x = 5
     try{
@@ -1048,3 +1041,30 @@ function try_catch(){
 }
 
 console.log(try_catch())
+
+function set_time_out(){
+    return setTimeout(() =>console.log('time_out'), 3000 )
+}
+
+console.log(set_time_out())
+
+function set_interval(){
+    interval = setInterval(() => console.log('interval'), 1000)
+    return interval
+}
+
+
+
+function stop_interval(){
+    let stop_inter = setTimeout(() => clearInterval(interval), 6000)
+    return stop_inter
+}
+
+
+function returnw(){
+    let x = 6
+    interval = setInterval(() => console.log('interval'), 1000)
+    let stop = setTimeout(() => clearInterval(interval), 5000)
+    return interval
+}
+console.log(returnw())
