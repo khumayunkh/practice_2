@@ -1031,7 +1031,7 @@ console.log(arrr.slice(0, arrr.indexOf(5)))
 console.log(arrr.splice(1,4))
 
 
-function try_catch(){
+function tryCatch(){
     let x = 5
     try{
         return ducument.querySelector('.tetxt').innerHTML = x
@@ -1040,31 +1040,41 @@ function try_catch(){
     }
 }
 
-console.log(try_catch())
+console.log(tryCatch())
 
-function set_time_out(){
-    return setTimeout(() =>console.log('time_out'), 3000 )
+// function setTimeOut(){
+//     return setTimeout(() =>console.log('time_out'), 3000 )
+// }
+
+// console.log(setTimeOut())
+
+// function set_Interval(){
+//     interval = setInterval(() => console.log('interval'), 1000)
+//     return interval
+// }
+
+
+
+// function stopInterval(){
+//     let stop_inter = setTimeout(() => clearInterval(interval), 6000)
+//     return stop_inter
+// }
+
+
+// function returnw(){
+//     let x = 6
+//     interval = setInterval(() => console.log('interval'), 1000)
+//     let stop = setTimeout(() => clearInterval(interval), 5000)
+//     return interval
+// }
+// console.log(returnw())
+
+
+function returnMultiple(){
+    let firstName = "Hasanov"
+    let secontName = 'Humoyun'
+    return {firstName, secontName}
 }
 
-console.log(set_time_out())
+console.log(returnMultiple())
 
-function set_interval(){
-    interval = setInterval(() => console.log('interval'), 1000)
-    return interval
-}
-
-
-
-function stop_interval(){
-    let stop_inter = setTimeout(() => clearInterval(interval), 6000)
-    return stop_inter
-}
-
-
-function returnw(){
-    let x = 6
-    interval = setInterval(() => console.log('interval'), 1000)
-    let stop = setTimeout(() => clearInterval(interval), 5000)
-    return interval
-}
-console.log(returnw())
