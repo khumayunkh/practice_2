@@ -1139,3 +1139,10 @@ function oddishOrEvenish(a){
 }
 
 console.log(oddishOrEvenish(4433))
+
+function getLength(a){
+    let x = a.flat(10)
+    return x.length
+}
+
+console.log(getLength([1, [2, [3, 4]]]))
