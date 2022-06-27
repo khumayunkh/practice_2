@@ -785,23 +785,6 @@ function sumArray(a){
 
 console.log(sumArray([1, [2, [1]], 3]) )
 
-function dashed(a){
-    let vowels = ['o', 'e', 'a', 'i', 'u']
-    let c = ''
-    for(let i in a){
-        if(a.includes(vowels[i])){
-            c += '-' + a[i] + '-'
-        }else{
-            c += a[i]
-        }
-    }
-    return c
-}
-
-console.log(dashed('Carpe Diem'))
-
-
-
 function isVowelSandwich(){
     let vowels = ['o', 'e', 'a', 'i', 'u']
     let a = [...document.querySelector('.input_isVowelSandwich').value]
@@ -1190,18 +1173,77 @@ console.log(lonelyInteger([1, -1, 2, -2, 3]))
 
 
 function trace(a){
-    let count = 0
+    let count = []
     for(i in a){
         for(j = 0; j<=i.length+1; j++ ){
-            count += a[i][j]
-            console.log(a[i][j])
+            if(a[0][0] === a[i][j]){
+                count.push(a[i][j])
+            }
+            if(a[1][1] === a[i][j]){
+                count.push(a[i][j])
+            }
+            if(a[2][2] === a[i][j]){
+                count.push(a[i][j])
+            }
         }
     }
-    return count
+    return count.reduce((a,b) => a+b)
 }
 
 console.log(trace([
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
-  ]))
+]))
+
+function reverseArr(a){
+    let x = a.toString()
+    let newArray = []
+    for(let i in x){
+        newArray.push(+x[i])
+    }
+    return newArray.reverse()
+}
+
+console.log(reverseArr(1485979))
+
+
+function numArgs(...arg){
+    return arg.length
+}
+
+console.log(numArgs({}))
+
+
+function reverseWords(a){
+    let x = a.split(' ')
+    return x.reverse().toString()
+}
+
+console.log(reverseWords('the sky is blue'))
+
+
+function isAutomorphic(a){
+    let x = Math.pow(a,2).toString()
+    let y = a.toString()
+    return x[x.length - 1] === y[y.length - 1]  
+}
+
+console.log(isAutomorphic(8))
+
+function dashed(a){
+    let vowels = ['a', 'e', 'i' , 'o', 'y']
+    let newArray = []
+    let x = [...a]
+    for(let i in x){
+        if(vowels.includes(x[i])){
+            newArray.push('-' + x[i] + '-')
+        }else{
+            newArray.push(x[i])
+        }
+    }
+    return newArray.join('')
+}
+
+
+console.log(dashed('Carpe Diem'))
