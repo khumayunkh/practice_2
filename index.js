@@ -1121,3 +1121,21 @@ function product(a,b){
 }
 
 console.log(product(1,2)(1,1)(2,3))
+
+function sevenBoom(a){
+    let x = a.toString()
+    return x.includes('7') ? 'Boom' : 'there is no item contain 7 within them'
+}
+
+console.log(sevenBoom([2, 55, 60, 97, 86]))
+
+function oddishOrEvenish(a){
+    let x = a.toString()
+    let count = 0
+    for(let i of x){
+        count += +i
+    } 
+    return count % 2 === 0 ? "Evenish" : 'Oddish'
+}
+
+console.log(oddishOrEvenish(4433))
