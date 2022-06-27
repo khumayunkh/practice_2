@@ -1089,6 +1089,14 @@ async function awaitAsync(){
 
 console.log(awaitAsync())
 
+function lastDig(a,b,c){
+    let x = a.toString()
+    let y = b.toString()
+    let z = c.toString()
+    let f = (x[x.length-1] * y[y.length-1]).toString()
+    return f[f.length-1] === z[z.length-1]
+}
 
+console.log(lastDig(12, 215, 2142))
 
 
